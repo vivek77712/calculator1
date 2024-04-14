@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link href="style2.css" rel="stylesheet">
+    <style>
+       
+       #image {
+
+    display: none;
+    position: absolute;
+    margin: 40px;
+
+}
+.add{
+background-color: black;
+color: white;
+border-radius: 4px;
+font-size: 12px;
+margin-left: 70%;
+
+}
+
+
+        .calculate{
+        text-align: center;
+        color: transparent;
+        background-image: linear-gradient(rgb(201, 87, 218),rgb(172, 219, 162),rgb(230, 156, 38));
+        -webkit-background-clip: text;
+        background-clip:var(rgb(227, 227, 193));
+    }
+
+.box1{
+    background-color: rgb(184, 198, 233);
+    color: rgb(36, 57, 124);
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7vh;
+
+}
+.box1 h3{
+    background-color: rgb(8, 15, 13);
+    border: 1px solid black;
+    color: white;
+    border-radius: 10px;;
+    width: 20px;
+    font-size: 20px;
+    margin: 5px;
+    padding-inline: 5px;
+    cursor: pointer;
+}
+.box2{
+    background-color: rgb(184, 198, 233);
+    color: rgb(35, 54, 116);
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7vh;
+}
+.box2 h3{
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    border-radius: 10px;;
+    width: 20px;
+    font-size: 20px;
+    margin: 5px;
+    padding-inline: 5px;
+    cursor: pointer;
+}
+.box3{
+    background-color: rgb(184, 198, 233);
+    color: rgb(35, 54, 116);
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7vh;
+}
+.box3 h3{
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    width: 20px;
+    font-size: 20px;
+    margin: 5px;
+    padding-inline: 5px;
+    cursor: pointer;
+}
+.box4{
+    background-color: rgb(184, 198, 233);
+    color: rgb(36, 57, 124);
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7vh;
+}
+.box4 h3{
+    background-color: rgb(165, 98, 71);
+    border: 1px solid black;
+    border-radius: 10px;;
+    width: 20px;
+    color: white;
+    font-size: 20px;
+    margin: 5px;
+    padding-inline: 5px;
+    cursor: pointer;
+    
+}
+
+.box5{
+    background-color: rgb(184, 198, 233);
+    color: rgb(36, 57, 124);
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7vh;
+}
+.box5 h3{
+    background-color: rgb(236, 235, 207);
+    border: 1px solid black;
+    border-radius: 10px;;
+    width: 20px;
+    font-size: 20px;
+    margin: 5px;
+    padding-inline: 5px;
+    cursor: pointer;
+}
+button{
+    background-color: rgb(28, 13, 13);
+    color: white;
+    width: 9vh;
+    border-radius: 4px;    
+    cursor: pointer;
+}
+body{
+    background-image: url('https://media.licdn.com/dms/image/D4E12AQHmv6I6JP3ZMg/article-cover_image-shrink_720_1280/0/1685542018671?e=2147483647&v=beta&t=ZrRxnDF-bq8T4H-Uvf6fNSlU_X8Orvg2TzcRORJFfWI');
+    background-position: cover;
+
+   
+}
+
+.input input{
+    width: 29.5%;
+   height: 10vh;
+    
+}
+.clear h4{
+    background-color: black;
+    color: white;
+    margin: 10px;
+    width: 9vh;
+    border-radius: 5%;
+    left: 350px;
+}  
+        .content{
+           
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            background-color: rgb(114, 118, 154);
+            color: white;
+           position: absolute;
+           left: 0px;
+           width: 108%;
+           margin: -69px;
+           bottom: 10px;
+           letter-spacing: 1px;
+           font-weight: 700;
+
+        }
+        .content h2:hover{
+            scale: 1;
+            color: orange;
+        
+        }
+        center h3:hover{
+            scale: 1;
+            color: transparent;
+            -webkit-background-clip: text;
+           background-clip: none;
+            background-image: linear-gradient(rgb(194, 86, 160),rgb(232, 213, 150),rgb(230, 156, 38));
+        }
+        .content p i{
+           
+            color: rgb(169, 76, 215);
+            
+        }
+   .content .image{
+      
+       margin-left: 2%;
+       justify-content: space-between;
+       
+   }
+  center h3 i{
+    color: rgb(211, 62, 62);
+  }
+   
+    </style>
+</head>
+<body>
+    <div class="calculate">
+        <h1>Calculator</h1>
+        <div class="Hello">
+    
+           
+            <img id="image"
+    
+                 src="https://m.media-amazon.com/images/I/71Vwn1KXApL.jpg" width="210" height="180"
+    
+                 alt="GFG image" />
+    
+        </div>
+    
+        <button class="add" type="button" onclick="show()" id="btnID">
+    
+            Click here
+    
+        </button>
+    </div>
+  
+    <div align="center">
+    
+
+        <div class="input">
+            <input type="text" id="result" type>
+        </div><br>
+        
+        <div class="box">
+            <div class="box1">
+                <h3 onclick="addToResult('1')">1</h3>
+                <h3 onclick="addToResult('2')">2</h3>
+                <h3 onclick="addToResult('3')">3</h3>
+            </div>
+            <div class="box2">
+                <h3 onclick="addToResult('4')">4</h3>
+                <h3 onclick="addToResult('5')">5</h3>
+                <h3 onclick="addToResult('6')">6</h3>
+            </div>
+            <div class="box3">
+                <h3 onclick="addToResult('7')">7</h3>
+                <h3 onclick="addToResult('8')">8</h3>
+                <h3 onclick="addToResult('9')">9</h3>
+            </div>
+            <div class="box4">
+                <h3 onclick="addToResult('0')">0</h3>
+                <h3 onclick="addToResult('+')">+</h3>
+                <h3 onclick="addToResult('-')">-</h3>
+            </div>
+            <div class="box5">
+                <h3 onclick="addToResult('*')">*</h3>
+                <h3 onclick="addToResult('/')">/</h3>
+                <h3 onclick="addToResult('.')">.</h3>
+            </div><br>
+            <div class="clear">
+                <h4 onclick="clearResult()">Del</h4>
+            </div>
+          
+            <center><div class="btn"><button onclick="calculate()">Sol</button></div></center>
+   </div> <br><br>
+    <footer>
+        <div class="content">
+         <p><div align="center"><h2>Know About </h2></div></p>
+         <div class="image">
+            <img id="im1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEUAern////x8vIAeLgAcbX6+PUAdbcAcLX39vQfgr3N3efs8PEAbrQAdrecvtgAc7bE1+Q+jcFLk8Tb6PLD2ery+Pvn8PcNfbu91OfU5PB6rNJamcezzeNin8uryeFinciFstWCsdRtpMyPudg0icDg7PSrx9zT4OmWutasM69TAAALbUlEQVR4nOWda3erKhCGNSBqC6G5pyamuZi2//8XHsyluQkyBAKe/a61V/cH0/oEmGGGAaLYuSaj8bK/3pbDQZXPoiia5dVgWG7X/eV4NHH/5yOXv3w/320rTFPOCWEMRSg6SvyPMUI4Tymutr/zvcuXcEU4XW4GacoJO1PJhBjhaTrYLKeO3sQF4XRVIopJG9sNJ8EUlSsXlNYJx8WM8taWa25NTmfF2PYL2SVclhgTA7iLCMbl0uo7WSScLyg3abuHtuR0Mbf3WrYIRwXHNvBOkJgXI0tvZodwVVGQYdFgJLRaWXk3C4TTtc3mu4LEfG3BuD5NOCptN98VI6Hl0531ScLPIWWO8I5idPjpkXDkmu/E+FQ7PkE4XbyA78i4eGI8GhNOihfxHRkL4yjElHD15NwFKoJNfYcZ4WduZfYCEcK5mckxItzSV/MdGOn2RYRj9toOehFhBpEHnLD00oBHIVo6J3wjvhrwKMLe3BJuPDbgUYiuHRJOKu6ZrxavQL4RQjjGr/PxKjEMMTgAwp33HnoWojsXhAvsG+xKeGGdcJL7taH3IrnuYNQkHJEwhuBFjGjGVHqEY+obqEFUz95oEa5CBBSIWolVHcJ+mIACsW+HcBcqoEDU8BrthOvUN4dCafsUrpUwaEAdxDbCXdiAArGto7YQBmtkLmozN2rCQN3ErVqchpIwSEf/KLXrVxGOugEoEFUTOAXhJKy5tkpEMQ1XEOahTbblYrkJ4aI7TSgaUR4vSgl3IQW87cJStygj7IgZvUhqUCWEEyfr1i6FuMTaSAir7liZs1gFIdyEkBeFim/0Cd8Ag5BxnFJKU8y9NzttTPg3EuoXV3C86H+M3t/fRx/9ReqsKENPiOgSlrqekOffvSTLerWyLHnvR357N2lamWog1HYU6W9ypDsry9ap12ZschkNhJqlkyj6ueWrlXy8fPn75p2YDuFWr4+i2fsjoGjGH6+elDwuhD8Qfmr2UbxvAhSIc6+zIfpQzvBAmOs1Af5OGgFFR936dBvoIcq4J1zpTbhRJQPs9d69GlR+n7a5I9Sdj+Jlcx899NPCayPiiZKw0DQzRA7Yy968ZiBJoSKcaloJ9iXvpGIkRn6d4lRBuNDsX7yvaMNeovtr3Igt5ITayTWuGIaim679JkBuU283hEPd7x5/KAn7fqenbCgj1HX2oRPeuv1rQu0mjPhcSbjznKa7acQrQkCKW21pMs2prTtdj8QrwlLfArZ4i9zhy+u9X9lEqOsLayk9fm/vf83xyideCEEmHisGYuJ7GAqRdQMhKHRFA0U3Ndp9aFeIPxJqBhVnpVKfn6xDSEVeSvv/CCvYF49YY4gvDOmH/1EY1eHdPSF4NZTlvcYsxshzSvGsP4dxJtQMm67EqoZWTN6854VP+guizoQGKTJG5g/ZxICqbPkt4dxktRClw4/kDJllSe87D8HInITnN4QLs6+e4XwzH/WyJHt/+/7iAfGJ739xQ2hu/+oTETAW/4KrsU2vCZdBffuWxJdXhGUo9sGmUHlF2K2qBF2lF8Lx/5PwuPEkMnP3ndDR6R8IZ77fxZFmZ0JI7NspHeLgmnAVjK+oDxyqnavwsJi0n0/UJr46EXpdDrsIkTT62n1//Iz2+5+3eX+zIOlzK8pseyJEBr8GpVLdGWYmf/LawJF00B+JWW52rHyofybJT3/wTIEHQkdCo2GYS7MY2dsNItvKn7xkjkm62SePwZig3O+QeUPWA1EQLk28oTYh0SBEtJBkDA6UfWRqKPDyQLgx8Yb6bfglf/cTIal+VOnXXtbbGFp7sjkQDkw6gUVCWjT0z1slbzMja4gGB0KjyEmfcNFCSKU1D9eP9oZGPTWtCc0y1ABC9ThM5xqAvbrEw8RcpHtBODf6cmwR0qUeoCEinwtCsxy8JcK0rwsoEL/gb0p2gtBsRmOHkMpdSdPzwKx1dJjVRNBkt1XCWZsRvX1+D+6nqBKEZt5Un3Aof3L3BiLsZd9gRB5HEzNnqk2I5IS9EQxQDEX9hfiT6CQamSUSrRCClf1A2yMdRWPHvdQqIbzwkY8jw1SpJ8IedI2ML6O+WRbKFyG0ooz0I8MKLV+E2QfMnJJ1ZFgM6osQWvjIighQReOUsE5anDIYakJYOMvKaGiWIrBLmCWj711RrPsfvbZYEdhN0TAaGAFaJcx6/ZzWx7YTjtOvt5bnM5jxH0Rm01IAoary5qDkm1y9NKNfjSUQl8dB1hRVkWENmj3CbHG3k4jk8rRU/fwvqBHzyHDNwh7h4OGFWa78RmADceabMBk2mEaiLH18B01rjFedLBEm68YGSVU1yIlJjt4XoSxWUH4oAaY/nfdSlbdIBhK7SBWxMawEeebelioIsw/ZkCIbxadAU+ncvT9UEcqzZ/LfD9sKIPyhzzmNYnpC9/JPfUMc4sDrvPRHnkFRlFlnkBy2mJd6jC0yRb2gYr8DyOWL2MJjfKjqbqyQfwxEWPiM8TNFBkW1KAchFDG+xzyNyiiqEskgwr7PXJuKUDGrARHypc986UsIxz5z3q8gTEc+1y1eQUgnzteefPdS9+uHfgkP64dmkxor64fuCVkpCH99ruO7JiS/3msxHBMeajE819O4JTzU0zivifJJiF9R1+aT8FTX5rg20SfhqTbRbX2pV8JTfanjGmGfhKcaYaM6704Qnuu8jSrbOkH4V6tvst+iE4R/+y1MBmInCP/2zJjse+oE4d++JxOP2AXC2hua7z/sAuHV/kODqanN/RauCK/2kBrsA+4A4c0+YHjStAOEN3u54d20A4Q3+/HhZyqET3h3pgL4XIzwCe/OxQCfbRI84f3ZJuAN64D9h34IH86ngdZPB0/4cMYQNPUdOuHjOVHQs75CJ2w46yuGncMdOCHC8SMhbEE/cMLGM/dgcTBgt7oPwsZzE2GLUGETNp99CXMYYRNKzi8FnEEbOKHsDFrAOcKBE0rPEYY0YsiE8rOgISMxZELFed7aZ7IHTag6kx3gEwMmVJ6rrx9E5dm7RL17wp70SUXVIBrI/4CaUH03AuC+NSrV3d9n8idVXyfS/gN3n2u53wIaYoSnS1AhIdS9ZyZUtd8zA3L7AUrjriDd+57ClM59T9p3doUovTu7undB50Wa967p350XmnTvzhP91PerGqqhj1q4wzIgPdpRKWEcxOH/UPF1I8u/epfsP3AfcPdcBvRO53/gXu5/4G51EWV0x9qwh4hCi3DSnUYkEivTQgi/mcWXbpNrAMKuGFSpGW0njJddQKRLJYOaMO6Hj0jvL4+FEca7IG5vUiiVOkJNwngdNmLaPN2GEIaN2A6oQRjvwh2LtK2L6hGGa27ajIw2YahOo8VNQAjDdP1qRw8kjEfB3VfFiGqqBieMJ3lY83CSKybbRoQiXgwpJMbyeNCcMA7o5j8dL2FAGI95GIORcT0bAyeMJ1UIeVRc6Q5BOGEcb/z3VNo+UXuGMP5kfm0qQY2pe4uEcVx6bEZEm1aXbBPGY2/NSBjExJgTxvHWSzMi+riE7Yow/sxfvq6BcA4dgc8Q1nU3r+2q5KFOxjVhPCno6/w/o0X7G9kmjOPp4kWMjC6m7a/jgFDEVMMXMDI61IyTHBAKk+OaUfCZGRhbhKIdS+rsvnhEaPlU+1khFONxjZ34DoTx+onxZ5FQaFXZbkjRfJWpf7iVHULRWQtusSER5sXT3fMkW4RC8/LJi1HPeDwt5/ZeyyKh0LJMn5zrEJyWWmlQbdklFBpvZpQbFXAixumsMIge1LJOKDRdbRHFINODCKZou7JgOh/kgrDWdL4ZpClvv5e5vsY5xYPN3AVdLVeEB+3nu7LCNMX1JTKC9XTklviBGCP1rTIUV9vf+d7lSzglPGoyGi/766IcDqp8Notms7waDMti3V+OR6CsmZn+A+d09/lyt0gNAAAAAElFTkSuQmCC" width="27" height="32">
+         <img id="im2" src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iFC_JvJhrVpA/v0/1200x900.jpg" width="27" height="32">
+        <br>
+        <center><h3>Made with <i class="ri-heart-line"></i> </h3></center>
+        </div>
+         <hr><br>
+         
+        </div>
+        
+     </footer>
+    <script>
+        function addToResult(value) {
+            document.getElementById('result').value += value;
+        }
+
+        function clearResult() {
+            document.getElementById('result').value = '';
+        }
+
+        function calculate() {
+            var result = document.getElementById('result').value;
+            var answer = eval(result);
+            document.getElementById('result').value = answer;
+            
+        }
+        function show() {
+
+/* Access image by id and change 
+
+the display property to block*/
+
+document.getElementById('image')
+
+    .style.display = "block";
+
+document.getElementById('btnID')
+
+    .style.display = "none";
+
+}
+
+    </script>
+</body>
+</html>
